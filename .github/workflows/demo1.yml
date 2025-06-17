@@ -6,12 +6,13 @@ on:
       - closed
     branches: 
       - master
-      - 'stage-*'
-  workflow_dispatch:
+      - 'stage*'
   push:
     branches: 
       - master
-      - 'stage-*'
+      - 'stage*'
+  workflow_dispatch:
+
     # paths: 
     #   # - '.github/workflow/*'
     #     - '.github/workflow/*'
