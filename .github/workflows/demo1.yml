@@ -12,9 +12,9 @@ on:
     branches: 
       - master
       - 'stage-*'
-    paths: 
-      # - '.github/workflow/*'
-        - '.github/workflow/*'
+    # paths: 
+    #   # - '.github/workflow/*'
+    #     - '.github/workflow/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
