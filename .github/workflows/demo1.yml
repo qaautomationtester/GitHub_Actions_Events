@@ -4,7 +4,16 @@ on:
     types:
       - opened
       - closed
-  workflow_dispatch: 
+    branches: 
+      - master
+      - 'stage-*'
+  workflow_dispatch:
+  push:
+    branches: 
+      - master
+      - 'stage-*'
+    paths-ignore: 
+      - '.github/workflow/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
