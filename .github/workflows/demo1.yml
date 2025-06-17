@@ -3,7 +3,18 @@ on:
   pull_request: 
     types:
       - opened
-  workflow_dispatch: 
+      - closed
+    branches: 
+      - master
+      - 'stage-*'
+  workflow_dispatch:
+  push:
+    branches: 
+      - master
+      - 'stage-*'
+    # paths: 
+    #   # - '.github/workflow/*'
+    #     - '.github/workflow/*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
